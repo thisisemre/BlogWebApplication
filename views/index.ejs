@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("partials/header.ejs")  %>
+<body>
+    <%- include("partials/navbar.ejs")  %>
+    <% if(locals.posts[0]){%>
+        <% for(let i =0;i<posts.length;i++){ %>
+        <div class="container">
+            <main>
+                <article>
+                    <h2><%=posts[i].title%></h2>
+                    <p class="post-meta">
+                        Published on <%=posts[i].date %>
+                    </p>
+                    <p>
+                       <%=posts[i].content %>
+                    </p>
+                </article>
+            </main>
+    
+        </div>
+        <% } %>
+    <% }else{ %>
+        <h1 style = text-align:center> There is nothing to see here. Write some post.</h1>
+    <% } %> 
+    
+<%- include("partials/footer.ejs")  %>
+</body>
+
+</html>

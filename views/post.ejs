@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/header.ejs")  %>
+<body>
+    <%- include("partials/navbar.ejs")  %>
+    <h2 id="postTitle">Create New Post</h2>
+  
+    <form id="postForm"  method = "POST" action="/post">
+      <label for="postTitle">Post Basligi:</label><br>
+      <textarea id="postTitle" name="postTitle" placeholder="Title" cols="50"></textarea><br><br>
+      <label for="postContent">Post Icerigi:</label><br>
+      <textarea id="postContent" name="postContent" placeholder="Content" rows="4" cols="50"></textarea><br><br>
+      
+      <button type="submit">Post</button>
+    </form>
+
+
+    <%- include("partials/footer.ejs")  %>
+</body>
+</html>
